@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="currency__container">
+        <h1>Currency Converter</h1>
+        <div class="currency__wrapper">
+            <div class="conventer__container">
+                <div class="valute__container" id="in__container">
+                    <h4>Amount</h4>
+                    <span>BYN</span>
+                    <input type="number" name="input__in" id="input__in" placeholder="Enter amount" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <ul id="in" class="valute">
+                        <li class="country">BYN</li>
+                        <li class="country">USD</li>
+                        <li class="country">EUR</li>
+                        <li class="country">CNY</li>
+                        <li class="country">RUB</li>
+                    </ul>
+                </div>
+                <div class="valute__container" id="out__container">
+                    <h4>Converted amount</h4>
+                    <span>BYN</span> 
+                    <input type="number" name="input__out" id="input__out" placeholder="Result" readonly>
+                    <ul id="out" class="valute">
+                        <li class="country">BYN</li>
+                        <li class="country">USD</li>
+                        <li class="country">EUR</li>
+                        <li class="country">CNY</li>
+                        <li class="country">RUB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="valute__on__day">
+                <h4>Currency exchange rate for the last two weeks</h4>
+                <label for="date__picker">Pick the date:</label>
+                <input type="date" id="date__picker">
+                <div id="rate__display"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
